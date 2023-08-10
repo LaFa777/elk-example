@@ -1,0 +1,31 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.2.3
+    hooks:
+      - id: check-ast
+      - id: check-builtin-literals
+      # запрет размещения докстрингов перед кодом
+      - id: check-docstring-first
+      - id: check-case-conflict
+      # запрет на коммит неразрешенных конфликтов мерджа гита
+      - id: check-merge-conflict
+      - id: end-of-file-fixer
+      # запрет коммитов в мастер и в релиз
+      - id: no-commit-to-branch
+        args: [ --branch=master, --branch=release ]
+  - repo: https://github.com/pre-commit/mirrors-autopep8
+    rev: ''
+    hooks:
+      - id: autopep8
+  - repo: https://github.com/psf/black
+    rev: ''
+    hooks:
+      - id: black
+  - repo: https://github.com/PyCQA/isort
+    rev: ''
+    hooks:
+      - id: isort
+  - repo: https://github.com/PyCQA/flake8
+    rev: ''
+    hooks:
+      - id: flake8

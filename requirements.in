@@ -1,0 +1,18 @@
+# Пакеты для запуска проекта
+flask
+python-json-logger
+psutil
+pydantic
+celery
+
+# просто для того чтобы в pycharm нормальный терминал был
+ipython
+
+# Пакеты для backend-разработчиков (в основном прехуки)
+black
+isort
+flake8
+pip-tools
+isort
+pre-commit
+coverage
